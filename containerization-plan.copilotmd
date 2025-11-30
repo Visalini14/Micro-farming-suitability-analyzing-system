@@ -1,0 +1,34 @@
+# **Containerization Plan**
+## **Goal**
+Setup Dockerfiles for the project to run inside of containers. Do not set up docker-compose for running locally as it is not required.
+
+## **List of services to be containerized**
+- **microfarming-frontend**
+  - **Description:** React frontend application.
+  - **Language:** JavaScript (React)
+  - **Entrypoint:** `npm start` (for development) or `serve -s build` (for production)
+  - **Dependencies:** Node.js, npm, all dependencies listed in `package.json`
+  - **Configuration:** Should read configuration from environment variables (e.g., API endpoints).
+
+## **Execution Step**
+> **Below are the steps for Copilot to follow; ask Copilot to update or execute this plan.**
+Steps to containerize the project:
+1. Check containerization pre-requisites:
+    1. Ensure Docker is installed and running.
+2. Check code is ready to run in a local container:
+    1. Ensure the application reads configuration from environment variables. Avoid hardcoding configuration values.
+    2. Review the application's dependencies that must be hosted in the cloud, and list these for the user.
+3. Create a Dockerfile for each project:
+    1. Check if the project already contains Dockerfiles. If so, list their file paths and skip the remaining steps: <none found>.
+    2. Define a valid base image based on the project's language.
+    3. Copy the required files into the container.
+    4. Set the working directory.
+    5. Install dependencies and build the project.
+    6. Expose the listening ports.
+    7. Define an entrypoint
+    8. Create .dockerignore if required.
+4. Build the Docker images for each project:
+    1. Use docker build command to build the Docker images (do not run). Tag the images with the proper version.
+5. Summarize the successful containerization:
+    1. List out the dockerfiles created for each project.
+    2. Describe to the user the code edits required to successfully containerize the project.

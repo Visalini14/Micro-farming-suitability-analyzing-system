@@ -1,0 +1,105 @@
+/* Care Guides Styles */
+.care-guides-page {
+  min-height: 100vh;
+  padding: 2rem 0;
+  background: linear-gradient(135deg, #f8fff8 0%, #e8f5e8 100%);
+}
+
+.care-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.care-category {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid #4CAF50;
+}
+
+.care-category h2 {
+  color: #2E7D32;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.care-tips {
+  list-style: none;
+  padding: 0;
+}
+
+.care-tips li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #424242;
+  line-height: 1.5;
+}
+
+.care-tips li:before {
+  content: '🌿';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+}
+
+.quick-action-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 3rem 0;
+}
+
+.action-card {
+  background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.3);
+}
+
+.action-card h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+}
+
+.action-card p {
+  margin: 0 0 1.5rem 0;
+  opacity: 0.9;
+}
+
+.action-card .btn-primary,
+.action-card .btn-outline {
+  background: white;
+  color: #4CAF50;
+  border: 2px solid white;
+}
+
+.action-card .btn-primary:hover,
+.action-card .btn-outline:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .care-categories {
+    grid-template-columns: 1fr;
+  }
+  
+  .care-category {
+    padding: 1rem;
+  }
+  
+  .quick-action-cards {
+    grid-template-columns: 1fr;
+  }
+}

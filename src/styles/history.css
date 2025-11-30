@@ -1,0 +1,252 @@
+/* Analysis History Styles */
+.analysis-history {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.history-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.history-header h1 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.history-header p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.history-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.history-actions button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn-danger {
+  background: #f44336;
+  color: white;
+}
+
+.btn-danger:hover {
+  background: #d32f2f;
+}
+
+.empty-history {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.empty-icon {
+  font-size: 64px;
+  margin-bottom: 20px;
+}
+
+.empty-history h3 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.empty-history p {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.history-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid #e0e0e0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.history-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.analysis-date {
+  color: #2196F3;
+  font-size: 14px;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+}
+
+.card-content {
+  margin-bottom: 20px;
+}
+
+.analysis-details {
+  margin-bottom: 15px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  font-size: 14px;
+}
+
+.detail-row .label {
+  color: #666;
+  font-weight: 500;
+}
+
+.detail-row .value {
+  color: #333;
+  text-align: right;
+  flex: 1;
+  margin-left: 10px;
+}
+
+.file-name {
+  font-family: monospace;
+  font-size: 12px;
+  background: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.image-analysis-summary {
+  background: #f8f9fa;
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 3px solid #4CAF50;
+}
+
+.image-analysis-summary h4 {
+  margin-bottom: 8px;
+  color: #2e7d32;
+  font-size: 14px;
+}
+
+.analysis-result {
+  font-size: 13px;
+  color: #555;
+}
+
+.sunlight-condition {
+  background: #e8f5e8;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.card-actions {
+  text-align: center;
+}
+
+.view-btn {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* Validation Message Styles */
+.validation-message {
+  margin: 20px 0;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.validation-message.success {
+  background: #e8f5e8;
+  color: #2e7d32;
+  border: 1px solid #4CAF50;
+}
+
+.validation-message.error {
+  background: #ffe6e6;
+  color: #d32f2f;
+  border: 1px solid #f44336;
+}
+
+/* Enhanced LocationSelector Styles */
+.coordinates {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.weather-status {
+  background: #f0f7ff;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  border-left: 4px solid #2196F3;
+}
+
+.weather-status h4 {
+  margin-bottom: 10px;
+  color: #1976d2;
+  font-size: 14px;
+}
+
+.weather-loading .success {
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+.weather-loading .error {
+  color: #d32f2f;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .history-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .history-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .history-actions button {
+    width: 100%;
+    max-width: 250px;
+  }
+}
